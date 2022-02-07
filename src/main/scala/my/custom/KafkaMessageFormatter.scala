@@ -7,15 +7,9 @@ import org.apache.kafka.common.serialization.Deserializer
 
 import java.io.PrintStream
 import java.nio.charset.StandardCharsets
-import java.util.Map
 import Console._
 
 class KafkaMessageFormatter extends DefaultMessageFormatter {
-
-
-  override def configure(configs: Map[String, _]): Unit = {
-    super.configure(configs)
-  }
 
 
   override def writeTo(consumerRecord: ConsumerRecord[Array[Byte], Array[Byte]], output: PrintStream): Unit = {
